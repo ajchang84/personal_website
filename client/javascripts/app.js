@@ -1,7 +1,10 @@
 (function(){
 
-  angular.module('charlieRun',['ngRoute'])
-    .config(function($routeProvider, $locationProvider){
+  angular
+    .module('charlieRun',['ngRoute'])
+    .config(config);
+
+    function config($routeProvider, $locationProvider){
       $routeProvider
         .when('/',{
           templateUrl:'../views/index.html',
@@ -28,6 +31,10 @@
           controller:'subController',
           controllerAs:'vm'
         })
-      $locationProvider.html5Mode(true);
-    })
+      $locationProvider.html5Mode(true).hashPrefix('*');
+      
+    }
+
+  config.$inject = ['$routeProvider', '$locationProvider']
+
 })()
