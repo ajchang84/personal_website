@@ -1,1 +1,11 @@
-<h1>Portfolio Page : {{vm.current}}</h1>
+<div class="leftbox subpage">
+	<p class="subtitle animated fadeInDown">PORTFOLIO</p>
+	<li>Latest</li>
+	<li>Mockups</li>
+	<li>Others</li>
+</div>
+
+<div class="rightbox subpage" ng-class="{expanding:vm.expand}">
+	<img ng-click="vm.exit()" class="cancel" src="/assets/cancel.png">
+
+</div>

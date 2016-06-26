@@ -1,6 +1,6 @@
-<h1>Sub Page</h1>
-{{vm.current}}
-<cy-about ng-show="vm.current=='/about'"></cy-about>
-<cy-portfolio ng-show="vm.current=='/portfolio'"></cy-portfolio>
-<cy-resume ng-show="vm.current=='/resume'"></cy-resume>
-<cy-contact ng-show="vm.current=='/contact'"></cy-contact>
+<div class="main_container animated" ng-class="{fadeOut:!vm.expand}">
+	<cy-about ng-show="vm.current=='/about'" exit="vm.exit" expand="vm.expand"></cy-about>
+	<cy-portfolio ng-show="vm.current=='/portfolio'" exit="vm.exit" expand="vm.expand"></cy-portfolio>
+	<cy-resume ng-show="vm.current=='/resume'" exit="vm.exit" expand="vm.expand"></cy-resume>
+	<cy-contact ng-show="vm.current=='/contact'" exit="vm.exit" expand="vm.expand"></cy-contact>
+</div>
