@@ -1,18 +1,20 @@
 /* MAIN SETTING */
 html { 
-  /*background: url('/assets/bg.jpg') no-repeat center center fixed; */
-  /*background: linear-gradient(141deg, #383838 0%, #D8D8D8 51%, #383838 75%);*/
+/*  background: url('/assets/bg.jpg') no-repeat center center fixed; 
+  background: linear-gradient(141deg, #383838 0%, #D8D8D8 51%, #383838 75%);
   background-color: #F0F0F0;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover;
+  -o-background-size: cover;*/
   background-size: cover;
+  background: url('/assets/shl.png'); 
+  background-repeat: repeat;
 	font-family: 'Open Sans', sans-serif;
 }
 
 a {
-    color: black;
-    text-decoration: none !important;
+  color: black;
+  text-decoration: none !important;
 }
 
 .main_container{
@@ -25,6 +27,7 @@ a {
 	background-color: white;
 	display: inline-flex;
 	box-shadow: 0px 0px 90px #808080;
+	border-radius: 20px;
 }
 
 .leftbox{
@@ -38,6 +41,7 @@ a {
 	background-color: #202020;
 	overflow: hidden;
 	position: relative;
+	border-radius: 0 20px 20px 0;
 }
 
 cy-about,
@@ -82,6 +86,7 @@ li{
 li 
 a:hover{
 	color:#FFCC00;
+	b/*order-bottom: 2px solid #FFCC00;*/
 }
 
 #logo{
@@ -119,26 +124,51 @@ a:hover{
 
 .latest
 .showcase{
-	height: 100%;
-	width: 300px;
+	height:120;
+	width: 200px;
 	margin-left:30px; 
+	/*border: 1px solid black;*/
+	align-items: center;
+	overflow: hidden;
+}
+
+.showcase img{
+	width: 200px;
+	height: auto;
+	vertical-align: middle;
+	margin-top: 15px;
+
+	-moz-transition: all 1.2s ease;
+	-webkit-transition: all 1.2s ease;
+	transition: all 1.2s ease;
+}
+
+.showcase img:hover {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* SUBPAGE SETUP */
 .leftbox.subpage{
 	margin-left: 3%;
 	width:20%;
+	text-align: right;
 }
 
 .subtitle{
 	font-size: 30px;
 	font-weight: 800;
 	margin-top:50%;
-
 }
 
-li{
+.leftbox li{
 	list-style-type:none;
+	cursor: pointer;
+}
+
+.leftbox li:hover{
+	color:#FFCC00;
 }
 
 .rightbox.subpage{
@@ -146,6 +176,13 @@ li{
 	width:30%;
 	right:0;
 	transition: width 1s ease-in-out;
+	color:white;
+	overflow: scroll;
+}
+ 
+.subcontent{
+	margin-left:10%;
+	width: 80%;
 }
 
 .expanding{
@@ -155,11 +192,43 @@ li{
 .cancel{
 	width: 25px;
 	height: 25px;
-	margin:10px;
+	margin:15px;
+	position: fixed;
 }
 
 
+/* PROFOLIO PAGE */
+.subcontent h2{
+	text-align: center;
+	font-weight: 300;
+}
 
+.codepen{
+	height: 200px;
+	width: 300px;
+	position: center;
+	/*overflow: hidden;*/
+}
+
+.showbox{
+	display: inline-flex;
+	align-items:flex-start;
+	height: 200px;
+	width: 280px;
+	overflow: hidden;
+}
+
+.showbox img{
+	/*position: fixed center;*/
+}
+.showbox div{
+	margin-left: 20px;
+}
+
+.description p{
+	font-weight: 200;
+	font-size: 12px;
+}
 
 
 

@@ -69,7 +69,27 @@
 		vm.msg = "portfolio";
 		vm.current = $location.path()
 
-
+		vm.latest = true;
+		vm.mockup = false;
+		vm.codepen = false;
+		vm.showContent = function(item){
+			if(item == 'latest'){
+				vm.latest = true;
+				vm.mockup = false;
+				vm.codepen = false;
+			}
+			if(item =='mockup'){
+				vm.latest = false;
+				vm.mockup = true;
+				vm.codepen = false;
+			}
+			if(item =='codepen'){
+				vm.latest = false;
+				vm.mockup = false;
+				vm.codepen = true;
+			}
+		}
+		
 	}
 
 	function resumeController($location){
