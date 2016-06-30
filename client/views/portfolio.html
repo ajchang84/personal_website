@@ -1,37 +1,48 @@
 <div class="leftbox subpage">
 	<p class="subtitle animated fadeInDown">PORTFOLIO</p>
-	<li ng-click="vm.showContent('latest')">Latest</li>
-	<li ng-click="vm.showContent('mockup')">Mockups</li>
-	<li ng-click="vm.showContent('codepen')">Codepen</li>
+	<li ng-click="vm.showContent('latest')" ng-class="{yellow:vm.latest}">Latest Project</li>
+	<!-- <li ng-click="vm.showContent('mockup')" ng-class="{yellow:vm.mockup}">Mockups</li> -->
+	<li ng-click="vm.showContent('codepen')" ng-class="{yellow:vm.codepen}">Codepen</li>
 </div>
 
 <div class="rightbox subpage" ng-class="{expanding:vm.expand}">
 	<img ng-click="vm.exit()" class="cancel" src="/assets/cancel.png">
 
-	<div class="subcontent latestContent" ng-show="vm.latest">
+	<!-- TODO: Use Compenent -->
+	<div class="subcontent" ng-show="vm.latest">
 		<h2>Latest Project</h2>
+		<img id="latest_cover" src="./assets/coolrelation.png">
+		<div class="latestContent">
+			<h2>Coolrelation</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis dolorum earum at qui ea ducimus, veniam nisi nam soluta. Hic laboriosam voluptas quos porro cum, vero consequatur beatae adipisci corporis!</p>
+		</div>
 	</div>
 	
-	<div class="subcontent mockupContent" ng-show="vm.mockup">
+	<!-- TODO: Use Compenent -->
+	<div class="subcontent" ng-show="vm.mockup">
 		<h2>Mockup Website</h2>
+		<div class="mockupContent"></div>
 	</div>
 
-	<div class="subcontent codepenContent" ng-show="vm.codepen">
+	<!-- TODO: Use Compenent -->
+	<div class="subcontent" ng-show="vm.codepen">
 		<h2>Codepen Front-Ends</h2>
-		<div class="showbox">
-			<a href="http://codepen.io/mrtial/pen/RRGOad" target="_blank"><img class="codepen" src="https://i.gyazo.com/5efdaed72f63222aa6aef5c093b38100.gif" alt="https://gyazo.com/5efdaed72f63222aa6aef5c093b38100"/></a>
-		</div>
+		<div class="codepenContent">
+			<div class="showbox">
+				<a href="http://codepen.io/mrtial/pen/RRGOad" target="_blank"><img class="codepen" src="https://i.gyazo.com/5efdaed72f63222aa6aef5c093b38100.gif" alt="https://gyazo.com/5efdaed72f63222aa6aef5c093b38100"/></a>
+			</div>
 
-		<div class="showbox">
-			<a href="http://codepen.io/mrtial/pen/XKKRKv" target="_blank"><img class="codepen" src="https://i.gyazo.com/e481d4a7e79de2223c39d8425496afb7.gif" alt="https://gyazo.com/e481d4a7e79de2223c39d8425496afb7"/></a>
-		</div>
-		
-		<div class="showbox">
-			<a href="http://codepen.io/mrtial/pen/OXXmPx" target="_blank"><img class="codepen" src="https://i.gyazo.com/b4280ba33a8f00b6bb820d3db17459a7.gif" alt="https://gyazo.com/b4280ba33a8f00b6bb820d3db17459a7"/></a>
-		</div>
+			<div class="showbox">
+				<a href="http://codepen.io/mrtial/pen/XKKRKv" target="_blank"><img class="codepen" src="https://i.gyazo.com/e481d4a7e79de2223c39d8425496afb7.gif" alt="https://gyazo.com/e481d4a7e79de2223c39d8425496afb7"/></a>
+			</div>
+			
+			<div class="showbox">
+				<a href="http://codepen.io/mrtial/pen/OXXmPx" target="_blank"><img class="codepen" src="https://i.gyazo.com/b4280ba33a8f00b6bb820d3db17459a7.gif" alt="https://gyazo.com/b4280ba33a8f00b6bb820d3db17459a7"/></a>
+			</div>
 
-		<div class="showbox">
-			<a href="https://gyazo.com/f8a25653763e74f4279b7837ea6169fb" target="_blank"><img class="codepen" src="https://i.gyazo.com/f8a25653763e74f4279b7837ea6169fb.gif" alt="https://gyazo.com/f8a25653763e74f4279b7837ea6169fb"/></a>
+			<div class="showbox">
+				<a href="https://gyazo.com/f8a25653763e74f4279b7837ea6169fb" target="_blank"><img class="codepen" src="https://i.gyazo.com/f8a25653763e74f4279b7837ea6169fb.gif" alt="https://gyazo.com/f8a25653763e74f4279b7837ea6169fb"/></a>
+			</div>
 		</div>
 	</div>
 

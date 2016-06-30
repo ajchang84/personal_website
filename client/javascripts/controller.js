@@ -96,17 +96,12 @@
 		let vm = this;
 		vm.msg = "resume";
 		vm.current = $location.path()
-
-
 	}
 
 	function contactController($location){
 		let vm = this;
 		vm.msg = "contact";
 		vm.current = $location.path()
-
-
 	}
-
 
 })()
