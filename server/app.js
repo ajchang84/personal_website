@@ -2,6 +2,8 @@ const express = require('express'),
       app = express(),
       morgan = require('morgan');
 
+// process.env = 'production'
+
 app.use(morgan('tiny'));
 
 // SET STATIC
@@ -20,6 +22,11 @@ app.get('*', function(req,res){
 })
 
 
-app.listen(3000, function(){
-  console.log('Server is on port 3000');
-})
+if (app.get('env') === 'development') {
+    require('dotenv').load();
+}
+
+var port = process.env.PORT || 3000;
+app.listen(port, function() {
+    console.log(`Listening on port ${port}`);
+}
