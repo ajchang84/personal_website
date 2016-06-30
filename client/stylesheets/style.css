@@ -94,14 +94,14 @@ cy-contact{
 	right:0;
 	transition: width 1s ease-in-out;
 	color:white;
+	/*overflow: scroll;*/
 }
  
 .subcontent{
 	width: 90%;
 	margin-left:auto;
 	margin-right:auto;
-	overflow: scroll;
-	/*text-align: center;*/
+	/*overflow: scroll;*/
 	/*border:1px dashed white;*/
 }
 
