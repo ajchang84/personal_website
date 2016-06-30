@@ -42,7 +42,13 @@
 		let vm = this;
 		vm.msg = "sub";
 		vm.current = $location.path()
-		vm.expand = false;
+    vm.expand = false;
+
+    if(vm.current==='/about'|| vm.current=='/portfolio'||vm.current=='/resume'||vm.current=='/contact'){
+    	$timeout(function(){
+    		vm.expand = true;
+    	}, 10);
+    };
 
 		vm.exit = function(){
 			vm.expand = false;
@@ -51,24 +57,20 @@
 				$location.path('/');
 			}, 1000);
 		}
-
-		$timeout(function(){
-			vm.expand = true;
-		}, 10);
 	}
 
 	function aboutController($location){
 		let vm = this;
 		vm.msg = "about";
-		vm.current = $location.path()
+		vm.current = $location.path();
 
 	}
 
 	function portfolioController($location){
 		let vm = this;
 		vm.msg = "portfolio";
-		vm.current = $location.path()
-
+		vm.current = $location.path();
+		
 		vm.latest = true;
 		vm.mockup = false;
 		vm.codepen = false;
@@ -95,13 +97,15 @@
 	function resumeController($location){
 		let vm = this;
 		vm.msg = "resume";
-		vm.current = $location.path()
+		vm.current = $location.path();
+
 	}
 
 	function contactController($location){
 		let vm = this;
 		vm.msg = "contact";
-		vm.current = $location.path()
+		vm.current = $location.path();
+
 	}
 
 })()
