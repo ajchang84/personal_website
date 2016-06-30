@@ -47,7 +47,8 @@
     if(vm.current==='/about'|| vm.current=='/portfolio'||vm.current=='/resume'||vm.current=='/contact'){
     	$timeout(function(){
     		vm.expand = true;
-    	}, 10);
+    	}, 30);
+    	// vm.expand = true;
     };
 
 		vm.exit = function(){
